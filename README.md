@@ -1,30 +1,32 @@
-# Promoter-Prediction-Programs
+# Promoter Prediction Programs
 
-The promoter region is located near the transcription start sites which regulates the 
-transcription initiation of the gene by controlling the binding of RNA polymerase.
-Thus, promoter region recognition is an important area of interest in the field of 
-bioinformatics. During the past years, many new promoter prediction programs
-(PPPs) have been emerged. PPPs aim to identify promoter regions in a genome
-using computational methods. Promoter prediction is a supervised learning
-problem which contains three main steps to extract features:
-1. CpG islands 
-2. Structural features 
-3. Content features
+Promoter regions, located near transcription start sites, regulate gene transcription by controlling the binding of RNA polymerase. Accurate identification of promoter regions is a critical task in bioinformatics. Over recent years, many computational promoter prediction programs (PPPs) have been developed to address this supervised learning problem.
 
-<b> Task:</b>
-<br/>
-You are asked to extract suitable features in order to train a discriminative
-model on dataset to classify promoter and non-promoter sequences
+---
 
-In the implementations, you should notice: <br/>
-➢ Related paper "Large-scale structural analysis of the core promoter in mammalian and plant genomes" is attached in order to get idea about feature definitions. <br/>
-➢ You can use the conversion table to calculate structural features. <br/>
-➢ You can use any feature selection method to reduce dimensionality. <br/>
-➢ Running time is important so, you should choose suitable classifier.<br/>
-➢ Implement 5-fold CV and calculate precision, recall and F-score to evaluate
-your method. <br/>
+## Project Overview
 
-<b>Datasets:</b>
-<br/>
-The dataset has 60,000 2-class samples which contain 30,000 promoter samples 
-and 30,000 exons, UTR3s and introns as non-promoter samples.
+The promoter prediction task involves extracting meaningful features from genomic sequences and training a discriminative model to classify promoter versus non-promoter sequences. The three primary categories of features extracted are:
+
+1. **CpG Islands**  
+2. **Structural Features**  
+3. **Content Features**
+
+---
+
+## Implementation Details
+
+- Feature extraction was guided by the related paper *“Large-scale structural analysis of the core promoter in mammalian and plant genomes”*, which provides definitions and insights for structural features.  
+- Structural features were computed using a conversion table approach.  
+- Dimensionality reduction was performed via feature selection methods to improve model efficiency.  
+- Considering runtime constraints, an appropriate classifier was selected to balance accuracy and computational cost.  
+- The model was evaluated using **5-fold cross-validation**, calculating **precision**, **recall**, and **F-score** to assess performance.
+
+---
+
+## Dataset
+
+- The dataset consists of 60,000 samples divided evenly into two classes:  
+  - 30,000 promoter sequences  
+  - 30,000 non-promoter sequences (including exons, 3’ UTRs, and introns)
+
